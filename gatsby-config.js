@@ -9,12 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Tim Choy's Personal Website`,
+    description: `Tim Choy's Personal Website`,
+    author: `Tim Choy <timchoy@berkeley.edu>`,
+    siteUrl: `https://timchoy.dev/`,
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "Tim Choy's Personal Website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Tim Choy's Personal Website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Tim Choy <timchoy@berkeley.edu>",
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.16",
     "gatsby": "^5.14.6",
     "gatsby-plugin-image": "^3.14.0",
     "gatsby-plugin-manifest": "^5.14.0",
@@ -15,7 +16,11 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "prettier": "^2.8.8"
+    "autoprefixer": "^10.4.21",
+    "gatsby-plugin-postcss": "^6.15.0",
+    "postcss": "^8.5.6",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^4.1.16"
   },
   "keywords": [
     "gatsby"
