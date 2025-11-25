@@ -95,12 +95,12 @@ export function Projects() {
             >
               {/* Image Section */}
               <div className="w-full md:w-auto md:flex-shrink-0">
-                <div className="relative rounded-xl bg-gradient-to-br from-slate-800/60 to-slate-900/60 border border-slate-700/50 p-2 group-hover:border-cyan-500/50 group-hover:shadow-xl group-hover:shadow-cyan-500/20 transition-all duration-500 backdrop-blur-sm inline-block">
-                  <div className="relative rounded-lg bg-slate-900 flex items-center justify-center overflow-hidden">
+                <div className="relative rounded-xl bg-gradient-to-br from-slate-800/60 to-slate-900/60 border border-slate-700/50 p-2 group-hover:border-cyan-500/50 group-hover:shadow-xl group-hover:shadow-cyan-500/20 transition-all duration-500 backdrop-blur-sm w-full md:inline-block">
+                  <div className="relative rounded-lg bg-slate-900 flex items-center justify-center overflow-hidden w-full">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="max-w-[500px] max-h-[400px] w-auto h-auto object-contain transition-transform duration-700 group-hover:scale-105 block"
+                      className="w-full max-w-full md:max-w-[500px] max-h-[400px] h-auto object-contain transition-transform duration-700 group-hover:scale-105 block"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                   </div>

@@ -104,7 +104,7 @@ export function Hero() {
               </motion.button>
             </motion.div>
 
-            <div className="flex items-center justify-center gap-6">
+            <div className="flex items-center justify-center gap-6 mb-16 md:mb-20 pb-8">
               {config.socialLinks
                 .filter(link => link.name === "Github")
                 .map(link => (
@@ -157,7 +157,7 @@ export function Hero() {
             config.navLinks.find(link => link.name === "About").id
           )
         }
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-cyan-400 transition-colors"
+        className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-cyan-400 transition-colors z-10"
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
       >
