@@ -5,6 +5,24 @@ import { Briefcase, Calendar } from "lucide-react"
 export function Experience() {
   const experiences = [
     {
+      role: "Incoming Software Developer",
+      company: "IBM",
+      period: "Incoming · Jul 2026",
+      accomplishments: [
+        "Joining IBM as a Software Developer starting July 2026.",
+      ],
+    },
+    {
+      role: "Software Engineer Intern",
+      company: "Human Interest",
+      period: "Jan 2026 - Apr 2026",
+      accomplishments: [
+        "Designed and shipped an automated container health-check and self-healing system for 30+ TypeScript microservices on AWS ECS, cutting recovery from unresponsive containers from manual on-call triage to under 60 seconds — using Terraform for infrastructure and Datadog for alerting",
+        "Built a decorator-based per-event latency SLA framework for an event-driven architecture, adopted org-wide across 10+ engineering teams; separately, identified and corrected a flawed frontend error SLO by switching its denominator from login-based sessions to real user monitoring (RUM), unlocking accurate per-service reliability tracking",
+        "Modernized CI/CD and developer documentation with GitHub Actions and Docusaurus — added PR preview deploys, cut pipeline queue time through dependency caching fixes, and authored on-call runbooks that enable engineers to independently triage container-health incidents",
+      ],
+    },
+    {
       role: "Deep Learning Researcher",
       company: "Project AEI",
       period: "Jun 2024 - Dec 2024",
