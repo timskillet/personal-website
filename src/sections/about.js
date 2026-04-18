@@ -76,23 +76,18 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-gray-200 text-lg leading-relaxed">
-              Hi, my name is Tim! I am a recent UC Berkeley graduate with
-              degrees in Computer Science and Data Science. Most of my
-              experience with programming has come from building real
-              applications, breaking them, and figuring out how to make them
-              better. Engineering for me is about stretching my understanding of
-              how things work under the hood, especially when there's room to
-              optimize, scale, or rethink the architecture entirely.
+              Hi, I'm Tim. I like building reliable software — and
+              understanding what breaks it.
             </p>
             <p className="text-gray-200 text-lg leading-relaxed">
-              Throughout my engineering journey, my work has spanned across
-              systems programming, data engineering, and AI research. Whether
-              it's designing distributed architectures, building data pipelines
-              for bioinformatics, or training emotionally-aware conversational
-              LLMs, I strive to build elegant solutions while learning something
-              new along the way. What motivates me most is tackling complex
-              engineering problems that require both strong fundamentals and a
-              bit of creatvity.
+              Recent UC Berkeley grad (CS + Data Science). Most recently on the
+              platform team at Human Interest, shipping ECS health checks and
+              SLO tooling across 30+ services. Joining IBM as a Software
+              Developer this July.
+            </p>
+            <p className="text-gray-200 text-lg leading-relaxed">
+              What keeps me here: backend systems, infrastructure that actually
+              holds, and the itch to keep digging one layer deeper.
             </p>
           </motion.div>
         </div>
