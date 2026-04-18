@@ -14,12 +14,12 @@ export function Experience() {
     },
     {
       role: "Software Engineer Intern",
-      company: "Human Interest — Builder Tools (Engineering Platform)",
+      company: "Human Interest",
       period: "Jan 2026 - Apr 2026",
       accomplishments: [
-        "Designed and shipped an ECS container-level health check system (service-framework + Terraform + Datadog) across 30+ TypeScript services, enabling automatic detection and restart of unresponsive containers and cutting recovery time from manual triage to under 60 seconds",
-        "Built a decorator-based domain-event latency SLA system and fixed a flawed frontend error SLO by replacing login-based session counts with per-frontend RUM sessions; both metrics now live on the Hi Tech Org dashboard and are surfaced in weekly Ops review across 10+ teams",
-        "Modernized CI/CD and docs — migrated service documentation to a centralized GitHub Actions + Docusaurus workflow with PR previews, fixed yarn cache keys, and authored Confluence runbooks enabling on-call engineers to self-triage container health issues",
+        "Designed and shipped an automated container health-check and self-healing system for 30+ TypeScript microservices on AWS ECS, cutting recovery from unresponsive containers from manual on-call triage to under 60 seconds — using Terraform for infrastructure and Datadog for alerting",
+        "Built a decorator-based per-event latency SLA framework for an event-driven architecture, adopted org-wide across 10+ engineering teams; separately, identified and corrected a flawed frontend error SLO by switching its denominator from login-based sessions to real user monitoring (RUM), unlocking accurate per-service reliability tracking",
+        "Modernized CI/CD and developer documentation with GitHub Actions and Docusaurus — added PR preview deploys, cut pipeline queue time through dependency caching fixes, and authored on-call runbooks that enable engineers to independently triage container-health incidents",
       ],
     },
     {
