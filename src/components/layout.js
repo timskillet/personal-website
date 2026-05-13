@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import { Hero } from "../sections/hero"
@@ -11,16 +10,6 @@ import { Contact } from "../sections/contact"
 import { Footer } from "./footer"
 
 const Layout = () => {
-  useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <Header />

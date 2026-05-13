@@ -61,20 +61,29 @@ export function Projects() {
       <ul className="work-list">
         {WORK.map(w => {
           const isOpen = open === w.id
+          const detailId = `work-detail-${w.id}`
           return (
-            <li
-              key={w.id}
-              className={"work-item " + (isOpen ? "open" : "")}
-              onClick={() => setOpen(isOpen ? null : w.id)}
-            >
-              <div className="work-row">
-                <div className="work-title-wrap">
-                  <div className="work-title">{w.title}</div>
-                  <div className="work-tag">— {w.tag}</div>
+            <li key={w.id} className={"work-item " + (isOpen ? "open" : "")}>
+              <button
+                className="work-row-btn"
+                onClick={() => setOpen(isOpen ? null : w.id)}
+                aria-expanded={isOpen}
+                aria-controls={detailId}
+              >
+                <div className="work-row">
+                  <div className="work-title-wrap">
+                    <div className="work-title">{w.title}</div>
+                    <div className="work-tag">— {w.tag}</div>
+                  </div>
+                  <div className="work-year">{w.year}</div>
                 </div>
-                <div className="work-year">{w.year}</div>
-              </div>
-              <div className="work-detail">
+              </button>
+              <div
+                id={detailId}
+                className="work-detail"
+                role="region"
+                aria-label={w.title}
+              >
                 <p>{w.blurb}</p>
                 <div className="work-stack">
                   {w.stack.map(s => (
@@ -88,7 +97,6 @@ export function Projects() {
                     href={w.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={e => e.stopPropagation()}
                   >
                     Source<span className="arrow">↗</span>
                   </a>

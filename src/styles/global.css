@@ -216,6 +216,17 @@ section {
 
 /* Work list */
 .work-list { list-style: none; padding: 0; margin: 0; }
+.work-row-btn {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
 .work-item {
   border-top: 1px solid var(--rule);
   padding: 22px 0;
