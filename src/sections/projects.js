@@ -83,6 +83,7 @@ export function Projects() {
                 className="work-detail"
                 role="region"
                 aria-label={w.title}
+                aria-hidden={!isOpen}
               >
                 <p>{w.blurb}</p>
                 <div className="work-stack">

@@ -14,7 +14,7 @@
 html, body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Geist', -apple-system, 'BlinkMacSystemFont', sans-serif;
   background: var(--bg);
   color: var(--ink);
   font-weight: 400;
@@ -160,7 +160,7 @@ section {
   margin: 0 0 32px 0;
 }
 .hero-lede .italic-accent {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Newsreader', 'Georgia', serif;
   font-style: italic;
   font-weight: 400;
   font-size: 1.05em;
@@ -209,7 +209,7 @@ section {
   color: var(--ink);
 }
 .prose .italic-accent {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Newsreader', 'Georgia', serif;
   font-style: italic;
   font-weight: 400;
 }
@@ -265,12 +265,16 @@ section {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height 360ms cubic-bezier(.2,.7,.2,1), opacity 240ms ease, margin-top 320ms ease;
+  visibility: hidden;
+  pointer-events: none;
+  transition: max-height 360ms cubic-bezier(.2,.7,.2,1), opacity 240ms ease, margin-top 320ms ease, visibility 360ms ease;
   margin-top: 0;
 }
 .work-item.open .work-detail {
   max-height: 400px;
   opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
   margin-top: 16px;
 }
 .work-detail p {
@@ -399,7 +403,7 @@ section {
   color: var(--ink);
 }
 .contact-headline .it {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: 'Newsreader', 'Georgia', serif;
   font-style: italic;
   font-weight: 400;
 }
