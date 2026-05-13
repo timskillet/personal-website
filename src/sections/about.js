@@ -1,96 +1,38 @@
-import { motion } from "motion/react"
-import { Code2, Rocket, Users, Award } from "lucide-react"
-import profilePicture from "../images/tim.png"
 import React from "react"
 
-export function About() {
-  const highlights = [
-    {
-      icon: Code2,
-      title: "Clean Code",
-      description:
-        "Writing maintainable and scalable code following best practices",
-    },
-    {
-      icon: Rocket,
-      title: "Fast Delivery",
-      description: "Delivering projects on time without compromising quality",
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "Working effectively with cross-functional teams",
-    },
-    {
-      icon: Award,
-      title: "Quality Focus",
-      description: "Ensuring high standards in every project",
-    },
-  ]
-
+function SectionHead({ num, title }) {
   return (
-    <section
-      id="about"
-      className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 scroll-mt-20"
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            About Me
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 mx-auto rounded-full"></div>
-        </motion.div>
+    <div className="section-head">
+      <div className="section-num">{num}</div>
+      <div className="section-title">{title}</div>
+    </div>
+  )
+}
 
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/30 via-blue-500/30 to-purple-500/30 rounded-xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-              <div className="relative rounded-xl overflow-hidden border border-slate-700/50 group-hover:border-cyan-500/50 transition-all duration-300 shadow-2xl group-hover:shadow-cyan-500/20">
-                <img
-                  src={profilePicture}
-                  width={500}
-                  height={500}
-                  alt="Tim Choy"
-                  className="w-full h-auto"
-                />
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <p className="text-gray-200 text-lg leading-relaxed">
-              Hi, I'm Tim. I like building reliable software — and
-              understanding what breaks it.
-            </p>
-            <p className="text-gray-200 text-lg leading-relaxed">
-              Recent UC Berkeley grad (CS + Data Science). Most recently on the
-              platform team at Human Interest, shipping ECS health checks and
-              SLO tooling across 30+ services. Joining IBM as a Software
-              Developer this July.
-            </p>
-            <p className="text-gray-200 text-lg leading-relaxed">
-              What keeps me here: backend systems, infrastructure that actually
-              holds, and the itch to keep digging one layer deeper.
-            </p>
-          </motion.div>
-        </div>
+export function About() {
+  return (
+    <section id="about">
+      <SectionHead num="01" title="About" />
+      <div className="prose">
+        <p>
+          Recent <strong>UC Berkeley</strong> grad in Computer Science and Data
+          Science, drawn to the quieter layers of the stack — distributed
+          systems, developer tooling, and the infrastructure that has to{" "}
+          <span className="italic-accent">actually hold</span>.
+        </p>
+        <p>
+          My favorite hours go to long walks — once, on purpose, over a hundred
+          thousand steps in a single day — and the slow kind of conversation
+          that doesn't need to land anywhere. Lately I've been deep in{" "}
+          <span className="italic-accent">The Pragmatic Programmer</span> and{" "}
+          <span className="italic-accent">
+            Designing Data-Intensive Applications
+          </span>
+          : the sort of books you have to put down to think. I learn most from
+          things I can't quite name yet, and the discipline of seeing a system{" "}
+          <span className="italic-accent">clearly</span> turns out to be the
+          same one that gets you closer to seeing anything else clearly.
+        </p>
       </div>
     </section>
   )
